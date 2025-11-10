@@ -59,7 +59,9 @@ fun Szokas() {
                 label = {Text("Új szokás neve")})
 
             Button(onClick = {
-                habits.add(Szokas(newHabit))
+                if (newHabit.isNotBlank()){
+                    habits.add(Szokas(newHabit))
+                }
             },
                 modifier = Modifier
                 .padding(top = 16.dp)
